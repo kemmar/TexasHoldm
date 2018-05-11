@@ -1,7 +1,7 @@
-package main.scala.texeshold.controller
+package main.scala.texashold.controller
 
-import main.scala.texeshold.domain.{Card, Player, Table}
-import main.scala.texeshold.domain.Deck._
+import main.scala.texashold.domain.{Card, Player, Table}
+import main.scala.texashold.domain.Deck._
 
 case class Game(players: Seq[Player], deck: Seq[Card], table: Table = Table()) {
 
@@ -16,7 +16,18 @@ case class Game(players: Seq[Player], deck: Seq[Card], table: Table = Table()) {
     (tbl1, dec1) <- table.dealToTable(elmDeck) // flop
     (tbl2, dec2) <- tbl1.dealToTable(dec1, 1) // turn
     result <- tbl2.dealToTable(dec2, 1) // river
-  } yield result
+  } yield {
+
+    println(
+      s"""
+         |Table Flop:\t\t${tbl1.shownCards}
+         |Table Turn:\t\t${tbl2.shownCards}
+         |Table River:\t${result._1.shownCards}
+      """.stripMargin)
+
+
+    result
+  }
 
   def playRound: Game = {
 

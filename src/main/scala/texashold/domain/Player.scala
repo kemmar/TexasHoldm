@@ -1,4 +1,4 @@
-package main.scala.texeshold.domain
+package main.scala.texashold.domain
 
 case class Player(playerId: Int, hand: Seq[Card] = Seq.empty[Card])
 

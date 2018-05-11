@@ -1,4 +1,4 @@
-name := "texesHold"
+name := "texasHold"
 
 version := "1.0"
 

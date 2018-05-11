@@ -1,6 +1,6 @@
-package main.scala.texeshold.domain
+package main.scala.texashold.domain
 
-import main.scala.texeshold.domain.Suit.Suit
+import main.scala.texashold.domain.Suit.Suit
 import scala.util.Random.shuffle
 
 
@@ -29,7 +29,7 @@ object Deck {
 
 case class DeckTool() {
   lazy val buildDeck: Seq[Card] = {
-    val values: Seq[String] = (1 to 10).map(_.toString).toSeq ++ Seq("J", "Q", "K")
+    val values: Seq[String] = (2 to 10).map(_.toString).toSeq ++ Seq("J", "Q", "K", "A")
     val suits: Seq[Card] = Suit.values.map(s => values.map(value => Card(s, value))).reduce(_ ++ _)
 
     shuffle(suits)

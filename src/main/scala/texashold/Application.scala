@@ -1,7 +1,7 @@
-package main.scala.texeshold
+package main.scala.texashold
 
-import main.scala.texeshold.controller.Game
-import main.scala.texeshold.domain.{DeckTool, Player}
+import main.scala.texashold.controller.Game
+import main.scala.texashold.domain.{DeckTool, Player}
 
 import scala.util.Try
 
