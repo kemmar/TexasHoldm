@@ -1,4 +1,4 @@
-package main.scala.texashold.domain
+package main.scala.texeshold.domain
 import Deck._
 
 case class Table(shownCards: Seq[Card] = Seq.empty[Card]) {

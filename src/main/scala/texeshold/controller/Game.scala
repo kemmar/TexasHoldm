@@ -1,7 +1,7 @@
-package main.scala.texashold.controller
+package main.scala.texeshold.controller
 
-import main.scala.texashold.domain.{Card, Player, Table}
-import main.scala.texashold.domain.Deck._
+import main.scala.texeshold.domain.{Card, Player, Table}
+import main.scala.texeshold.domain.Deck._
 
 case class Game(players: Seq[Player], deck: Seq[Card], table: Table = Table()) {
 

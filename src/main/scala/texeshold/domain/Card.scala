@@ -1,6 +1,6 @@
-package main.scala.texashold.domain
+package main.scala.texeshold.domain
 
-import main.scala.texashold.domain.Suit.Suit
+import main.scala.texeshold.domain.Suit.Suit
 import scala.util.Random.shuffle
 
 
