@@ -22,7 +22,7 @@ case class Game(players: Seq[Player], deck: Seq[Card], table: Table = Table()) {
 
     val (newCards, newPlayers) = dealCards
 
-   buildTable(newCards.discardTopCard) match {
+    buildTable(newCards.discardTopCard) match {
       case Some((tbl, dk)) => this.copy(newPlayers, dk, tbl)
       case _ => this
     }

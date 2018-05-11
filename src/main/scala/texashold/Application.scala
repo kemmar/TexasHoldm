@@ -19,8 +19,8 @@ object Application extends App {
     println(s"players Hands: ${game.players}")
     println(s"Table Hands: ${game.table}")
   } recover {
-    case e: ArrayIndexOutOfBoundsException => System.err.println(s"Missing first argument number of players [Int]")
-    case e: NumberFormatException => System.err.println(s"Invalid argument: ${args(0)} use number")
+    case _: ArrayIndexOutOfBoundsException => System.err.println(s"Missing first argument number of players [Int]")
+    case _: NumberFormatException => System.err.println(s"Invalid argument: ${args(0)} use number")
     case e: Throwable => System.err.println(e)
   }
 }
